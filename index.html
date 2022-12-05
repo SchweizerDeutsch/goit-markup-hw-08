@@ -58,6 +58,11 @@
             >
           </li>
         </ul>
+        <button class="menu-btn page-header__menu-bth js-open-menu" type="button">
+          <svg class="menu-btn__svg">
+            <use href="./images/icons.svg/sprite.svg#icon-menu"></use>
+          </svg>
+        </button>
       </div>
     </header>
 
@@ -156,10 +161,17 @@
           <ul class="team-cards">
             <li class="team-card__list">
               <img
-                src="images/ihorDemiyanenko.jpg"
-                alt="Дизайнер продукта"
-                width="270"
-                height="260"
+                srcset="
+                  ./images/team-card/team-480-1@1x.jpg  450w,
+                  ./images/team-card/team-480-1@2x.jpg  900w,
+                  ./images/team-card/team-768-1@1x.jpg  354w,
+                  ./images/team-card/team-768-1@2x.jpg  708w,
+                  ./images/team-card/team-1200-1@1x.jpg 270w,
+                  ./images/team-card/team-1200-1@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                src="./images/team-card/team-480-1@1x.jpg"
+                alt="igorDemyanenko"
               />
               <div class="our-employees">
                 <h3 class="team-list">Ігор Дем'яненко</h3>
@@ -197,7 +209,19 @@
               </div>
             </li>
             <li class="team-card__list">
-              <img src="images/olgaRepina.jpg" alt="Фронтенд-розробник" width="270" height="260" />
+              <img
+                srcset="
+                  ./images/team-card/team-480-2@1x.jpg  450w,
+                  ./images/team-card/team-480-2@2x.jpg  900w,
+                  ./images/team-card/team-768-2@1x.jpg  354w,
+                  ./images/team-card/team-768-2@2x.jpg  708w,
+                  ./images/team-card/team-1200-2@1x.jpg 270w,
+                  ./images/team-card/team-1200-2@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                src="./images/team-card/team-480-1@1x.jpg"
+                alt="olgaRepina"
+              />
               <div class="our-employees">
                 <h3 class="team-list">Ольга Рєпіна</h3>
                 <p class="team-text" lang="en">Frontend Developer</p>
@@ -234,7 +258,19 @@
               </div>
             </li>
             <li class="team-card__list">
-              <img src="images/nickoleTarasov.jpg" alt="Маркетинг" width="270" height="260" />
+              <img
+                srcset="
+                  ./images/team-card/team-480-3@1x.jpg  450w,
+                  ./images/team-card/team-480-3@2x.jpg  900w,
+                  ./images/team-card/team-768-3@1x.jpg  354w,
+                  ./images/team-card/team-768-3@2x.jpg  708w,
+                  ./images/team-card/team-1200-3@1x.jpg 270w,
+                  ./images/team-card/team-1200-3@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                src="./images/team-card/team-480-1@1x.jpg"
+                alt="nickoleTarasov"
+              />
               <div class="our-employees">
                 <h3 class="team-list">Микола Тарасов</h3>
                 <p class="team-text" lang="en">Marketing</p>
@@ -271,7 +307,19 @@
               </div>
             </li>
             <li class="team-card__list">
-              <img src="images/michailoYermakov.jpg" alt="Дизайнер ІК" width="270" height="260" />
+              <img
+                srcset="
+                  ./images/team-card/team-480-4@1x.jpg  450w,
+                  ./images/team-card/team-480-4@2x.jpg  900w,
+                  ./images/team-card/team-768-4@1x.jpg  354w,
+                  ./images/team-card/team-768-4@2x.jpg  708w,
+                  ./images/team-card/team-1200-4@1x.jpg 270w,
+                  ./images/team-card/team-1200-4@2x.jpg 540w
+                "
+                sizes="(min-width:1200px) 270px, (min-width:768px) 354px, (min-width:480px) 450px, 100vw"
+                src="./images/team-card/team-480-1@1x.jpg"
+                alt="mykhailoErmakov"
+              />
               <div class="our-employees">
                 <h3 class="team-list">Михайло Єрмаков</h3>
                 <p class="team-text" lang="en">UI Designer</p>
@@ -373,7 +421,7 @@
             <span class="logo-accent">Web</span>Studio
           </a>
           <address class="address">
-            <ul>
+            <ul class="footer-contacts-us">
               <li class="address-list">
                 <a
                   class="address-link_accent"
@@ -428,7 +476,7 @@
 
         <div class="footer-subscribe-to-us">
           <p class="subscribe-to-us">ПІДПИШІТЬСЯ НА РОЗСИЛКУ</p>
-          <form>
+          <form class="footer-form">
             <input
               class="footer-form-subscribe"
               type="email"
@@ -524,6 +572,48 @@
         </form>
       </div>
     </div>
+    <div class="menu-container js-menu-container" id="mobile-menu">
+      <button class="menu-btn menu-container__bth js-close-menu">
+        <svg class="menu-btn__svg">
+          <use class="menu-btn__icon" href="./images/icons.svg/sprite.svg#close-menu"></use>
+        </svg>
+      </button>
+
+      <nav class="menu-nav_container">
+        <div class="menu-nav_container-section">
+          <ul class="mobile-menu_link">
+            <li><a href="./index.html" class="link">Студія</a></li>
+            <li><a href="./portfolio.html" class="link">Портфоліо</a></li>
+            <li><a href="#" class="link">Контакти</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <ul class="mobile-menu_contacts">
+            <li>
+              <a href="tel:+38 096 111 11 11">+38 096 111 11 11</a>
+            </li>
+            <li><a href="mailto:info@devstudio.com"></a>info@devstudio.com</li>
+          </ul>
+        </div>
+        <div>
+          <ul class="mobile-menu_social">
+            <li class="mobile-menu_social-link"><a href="Instagram"></a>Instagram</li>
+            <li class="mobile-menu_social-link"><a href="Twitter"></a>Twitter</li>
+            <li class="mobile-menu_social-link"><a href="Facebook"></a>Facebook</li>
+            <li class="mobile-menu_social-link"><a href="LinkedIn"></a>LinkedIn</li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+
     <script src="./modal.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="mobile-menu.js"></script>
   </body>
 </html>

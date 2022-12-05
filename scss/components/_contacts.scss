@@ -1,18 +1,23 @@
 .auth-nav {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
-  letter-spacing: 0.02em;
-  display: flex;
-  align-items: center;
+  display: none;
+
+  @include tablet($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 90px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    gap: 8px;
+  }
 }
 
 .auth-nav-list a {
   color: var(--primary-tex-color);
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 12px;
+  line-height: 1.16;
   letter-spacing: 0.02em;
   text-decoration: none;
   gap: 10px;
@@ -22,15 +27,32 @@
   &:focus {
     color: var(--accent-color);
   }
+
+  @include tablet($tablet) {
+    font-size: 12px;
+    line-height: 1.16;
+    gap: 8px;
+  }
+
+  @include desktop($desktop) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 
 .address {
+  // padding-bottom: 60px;
   font-style: normal;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
   &:hover,
   &:focus {
     color: var(--accent-color);
+  }
+
+  @include desktop($desktop) {
+    font-style: normal;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 }
 
@@ -46,7 +68,11 @@
 }
 
 .auth-nav-list:first-child {
-  margin-right: 50px;
+  margin: 0;
+
+  @include desktop($desktop) {
+    margin-right: 50px;
+  }
 }
 
 .auth-nav-link {

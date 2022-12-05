@@ -1,7 +1,17 @@
 .site-nav {
-  display: flex;
-  margin-left: 93px;
-  align-items: center;
+  display: none;
+
+  @include tablet($tablet) {
+    display: flex;
+    margin-left: 93px;
+    align-items: center;
+  }
+
+  // @include desktop($desktop) {
+  //   display: flex;
+  //   margin-left: 93px;
+  //   align-items: center;
+  // }
 }
 
 .site-nav a {

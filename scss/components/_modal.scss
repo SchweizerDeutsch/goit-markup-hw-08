@@ -8,13 +8,27 @@
   padding: 40px;
   top: 50%;
   left: 50%;
-  width: 528px;
-  height: 581px;
+  width: 450px;
+  height: 609px;
   transform: translate(-50%, -50%) scale(1);
 
   background-color: var(--white-color);
 
   transition-duration: 250ms;
+
+  @include desktop($desktop) {
+    position: absolute;
+    padding: 40px;
+    top: 50%;
+    left: 50%;
+    width: 528px;
+    height: 581px;
+    transform: translate(-50%, -50%) scale(1);
+
+    background-color: var(--white-color);
+
+    transition-duration: 250ms;
+  }
 }
 
 .cross {
@@ -27,10 +41,22 @@
   justify-content: center;
   font-weight: 700;
   font-size: 20px;
-  line-height: 1.15;
+  line-height: 1.5;
   text-align: center;
   color: var(--title-tex-color);
   margin-bottom: 12px;
+
+  @include desktop($desktop) {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: var(--title-tex-color);
+    margin-bottom: 12px;
+  }
 }
 
 .label-list {
@@ -76,10 +102,18 @@
 }
 .textarea {
   resize: none;
-  width: 448px;
+  width: 370px;
   height: 120px;
   padding: 12px 15px;
   margin-top: 4px;
+
+  @include desktop($desktop) {
+    resize: none;
+    width: 448px;
+    height: 120px;
+    padding: 12px 15px;
+    margin-top: 4px;
+  }
 }
 
 .modal-input:focus + .modal-icon-input {
@@ -91,10 +125,22 @@
   align-items: center;
   justify-content: center;
   font-weight: 400;
-  font-size: 14px;
+  font-size: 12px;
+  line-height: 1.16;
   color: var(--primary-tex-color);
 
   margin-bottom: 30px;
+
+  @include desktop($desktop) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 400;
+    font-size: 14px;
+    color: var(--primary-tex-color);
+
+    margin-bottom: 30px;
+  }
 }
 
 .modal-form-own-check {

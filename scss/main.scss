@@ -1,3 +1,7 @@
+@import './utils/variables';
+@import './utils/visually-hidden';
+@import './utils/mixins';
+
 @import './base/base';
 @import './base/reset';
 
@@ -19,10 +23,10 @@
 @import './components/subscribes';
 @import './components/team';
 @import './components/section';
+@import './components/menu-btn';
+@import './components/menu-container';
+@import './components/mobile-menu';
 
 @import './layout/footer';
 @import './layout/header';
 @import './layout/navigation';
-
-@import './utils/variables';
-@import './utils/visually-hidden';

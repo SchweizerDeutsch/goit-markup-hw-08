@@ -1,11 +1,41 @@
 .clients {
-  padding: 94px 0px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @include desktop($desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 }
 
 .clients-list {
   display: flex;
-  justify-content: center;
-  gap: 30px;
+  flex-wrap: wrap;
+
+  // @include mobile($mobile) {
+  //   display: flex;
+  //   // justify-content: center;
+  //   gap: 30px;
+  // }
+
+  @include desktop($desktop) {
+    justify-content: space-between;
+  }
+}
+
+.clients__expample {
+  width: calc((100% - 30px) / 2);
+  // width: 210px;
+  height: 92px;
+  justify-content: space-between;
+
+  @include tablet($tablet) {
+    width: 226px;
+  }
+
+  @include desktop($desktop) {
+    width: 170px;
+  }
 }
 
 .clients-expample__link {
@@ -29,16 +59,22 @@
 
 .clients-title {
   font-weight: 700;
-  font-size: 36px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.17;
   text-align: center;
   color: var(--title-tex-color);
-  margin-bottom: 50px;
-}
+  margin-bottom: 30px;
 
-.clients__expample {
-  width: 170px;
-  height: 92px;
+  @include tablet($tablet) {
+    font-size: 28px;
+    line-height: 1.17;
+  }
+
+  @include desktop($desktop) {
+    font-size: 36px;
+    line-height: 1.16px;
+    margin-bottom: 50px;
+  }
 }
 
 .clients-expample__link:focus .clients-svg,

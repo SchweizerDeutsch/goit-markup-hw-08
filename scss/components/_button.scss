@@ -2,7 +2,7 @@
   display: block;
   color: var(--white-color);
   background-color: var(--accent-color);
-  padding: 10px 32px;
+  padding: 10px 24px;
   font-weight: 700;
   font-size: 16px;
   line-height: 30px;
@@ -15,6 +15,10 @@
   &:hover,
   &:focus {
     background-color: #188ce8;
+  }
+
+  @include desktop($desktop) {
+    padding: 10px 32px;
   }
 }
 

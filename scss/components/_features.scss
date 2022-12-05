@@ -1,21 +1,61 @@
 .features-listwrapper {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @include tablet($tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    width: calc((100 - 30px) / 2);
+    margin-right: 0;
+  }
+
+  @include desktop($desktop) {
+    display: flex;
+    flex-wrap: nowrap;
+  }
 }
+
 .features-list {
-  width: 270px;
+  width: 450px;
+
+  @include desktop($desktop) {
+    width: 270px;
+  }
 }
 .features-list:not(:last-child) {
   margin-right: 30px;
+
+  @include tablet($tablet) {
+    margin-right: 0;
+  }
 }
 .features-icon {
-  width: 270px;
+  width: 450px;
   height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #f5f4fa;
   border-radius: 4px;
-  margin-bottom: 30px;
+  // margin-bottom: 30px;
+
+  @include tablet($tablet) {
+    flex-wrap: wrap;
+    width: calc((100% - 30px) / 2);
+  }
+
+  @include desktop($desktop) {
+    width: 270px;
+    height: 120px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    background-color: #f5f4fa;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
 }
 
 .icon-features-icon {
@@ -24,16 +64,33 @@
 }
 
 .features-title {
+  text-align: center;
   color: #212121;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   margin-bottom: 10px;
+
+  @include desktop($desktop) {
+    color: #212121;
+    font-size: 14px;
+    line-height: 1.14;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
 }
 
 .features-text {
+  display: inline;
   color: var(--primary-tex-color);
   font-weight: 400;
   width: 270px;
   font-size: 14px;
+
+  @include desktop($desktop) {
+    color: var(--primary-tex-color);
+    font-weight: 400;
+    width: 270px;
+    font-size: 14px;
+  }
 }
