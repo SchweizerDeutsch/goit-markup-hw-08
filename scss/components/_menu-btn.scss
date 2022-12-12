@@ -1,12 +1,15 @@
 .menu-btn {
-  width: 40px;
-  height: 40px;
-  background-color: transparent;
-  border: none;
-  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  min-height: 40px;
+  min-width: 40px;
+  padding: 0;
+
+  background-color: rgba(0, 0, 0, 0);
 
   @include tablet($tablet) {
     display: none;

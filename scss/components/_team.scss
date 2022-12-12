@@ -3,55 +3,50 @@
 }
 
 .team-cards {
-  display: flex;
-  gap: 30px;
-  flex-wrap: wrap;
-  justify-content: center;
   @include tablet($tablet) {
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
   }
 }
 
 .team-card__list {
+  flex-basis: calc((100% - 30px * 3) / 4);
   background-color: #ffffff;
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
 
-  // @include mobile($mobile) {
-  //   width: 450px;
-  //   height: 622px;
-  // }
+  @include tablet($tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 
-  // @include tablet($tablet) {
-  //   width: 354px;
-  //   height: 536px;
-  // }
-
-  // @include desktop($desktop) {
-  //   width: 270px;
-  //   height: 428px;
-  // }
+  @include desktop($desktop) {
+    flex-basis: calc((100% - 30px * 3) / 4);
+  }
 }
 
-.team-card {
-  flex-basis: 100%;
+.team-card__list:not(:last-child) {
+  margin-bottom: 30px;
+
   @include tablet($tablet) {
-  flex-basis: calc((100% - 30px ) / 2);
+    margin-bottom: 0;
   }
-  
+
+  @include desktop($desktop) {
+    margin-bottom: 0;
+  }
 }
 
 .our-employees {
-  padding-left: 30px;
-  padding-right: 30px;
   padding: 30px;
 }
+
 .team-text {
   font-size: 16px;
   line-height: 1.8;
   text-align: center;
+  margin-bottom: 16px;
 }
 
 .team-icon {

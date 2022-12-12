@@ -3,6 +3,10 @@
   flex-wrap: wrap;
   justify-content: center;
 
+  @include tablet($tablet) {
+    flex-direction: column;
+  }
+
   @include desktop($desktop) {
     display: block;
   }
@@ -49,6 +53,5 @@
 
   @include desktop($desktop) {
     width: 358px;
-    margin-right: 12px;
   }
 }

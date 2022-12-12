@@ -1,15 +1,9 @@
 .features-listwrapper {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 30px;
-
   @include tablet($tablet) {
     display: flex;
     flex-wrap: wrap;
-    width: calc((100 - 30px) / 2);
-    margin-right: 0;
+    gap: 30px;
   }
-
   @include desktop($desktop) {
     display: flex;
     flex-wrap: nowrap;
@@ -17,45 +11,35 @@
 }
 
 .features-list {
-  width: 450px;
+  @media screen and (max-width: 769px) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+
+.features-list:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.features-list {
+  @include tablet($tablet) {
+    flex-basis: calc((100% - 30px) / 2);
+  }
 
   @include desktop($desktop) {
-    width: 270px;
+    flex-basis: calc((100% - 30px * 3) / 4);
   }
 }
-.features-list:not(:last-child) {
-  margin-right: 30px;
 
-  @include tablet($tablet) {
-    margin-right: 0;
-  }
-}
 .features-icon {
-  width: 450px;
-  height: 120px;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 30px;
+
+  width: 100%;
+  height: 120px;
   background-color: #f5f4fa;
   border-radius: 4px;
-  // margin-bottom: 30px;
-
-  @include tablet($tablet) {
-    flex-wrap: wrap;
-    width: calc((100% - 30px) / 2);
-  }
-
-  @include desktop($desktop) {
-    width: 270px;
-    height: 120px;
-    display: flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f4fa;
-    border-radius: 4px;
-    margin-bottom: 30px;
-  }
 }
 
 .icon-features-icon {
@@ -72,11 +56,7 @@
   margin-bottom: 10px;
 
   @include desktop($desktop) {
-    color: #212121;
-    font-size: 14px;
-    line-height: 1.14;
-    text-transform: uppercase;
-    margin-bottom: 10px;
+    text-align: center;
   }
 }
 
