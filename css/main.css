@@ -550,6 +550,14 @@ ol {
   line-height: 1.4;
   letter-spacing: 0.06em;
   color: var(--white-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .hero {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 }
 @media screen and (min-width: 1200px) {
   .hero {
@@ -585,7 +593,7 @@ ol {
   background-position: center;
   background-size: cover;
   background-color: #c4c4c4;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../images/fotohero.jpg");
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-480-1@x.jpg");
   padding-top: 118px;
   padding-bottom: 118px;
   margin-left: auto;
@@ -593,15 +601,17 @@ ol {
   background-size: cover;
   background-position: center;
   text-align: center;
-  max-width: 480px;
+  max-width: 767px;
 }
 @media screen and (min-width: 768px) {
   .main-hero {
-    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-768-1@x.jpg");
+    max-width: 1199px;
   }
 }
 @media screen and (min-width: 1200px) {
   .main-hero {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../../images/hero/hero-1200-1@x.jpg");
     max-width: 1600px;
     height: 600px;
   }

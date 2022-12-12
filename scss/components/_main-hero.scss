@@ -9,6 +9,13 @@
   line-height: 1.4;
   letter-spacing: 0.06em;
   color: var(--white-color);
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @include tablet($tablet) {
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
 
   @include desktop($desktop) {
     font-size: 44px;
@@ -43,7 +50,7 @@
   background-size: cover;
   background-color: #c4c4c4;
   background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
-    url('../images/fotohero.jpg');
+    url('../../images/hero/hero-480-1@x.jpg');
 
   padding-top: 118px;
   padding-bottom: 118px;
@@ -52,13 +59,17 @@
   background-size: cover;
   background-position: center;
   text-align: center;
-  max-width: 480px;
+  max-width: 767px;
 
   @include tablet($tablet) {
-    max-width: 768px;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/hero/hero-768-1@x.jpg');
+    max-width: 1199px;
   }
 
   @include desktop($desktop) {
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+      url('../../images/hero/hero-1200-1@x.jpg');
     max-width: 1600px;
     height: 600px;
   }
