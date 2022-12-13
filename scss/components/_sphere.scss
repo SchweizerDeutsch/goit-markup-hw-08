@@ -3,9 +3,11 @@
 
   @include desktop($desktop) {
     display: block;
-
-    padding-top: 0;
   }
+}
+
+.sphere.section {
+  padding-top: 0;
 }
 
 .sphere-pictures {

@@ -53,5 +53,6 @@
 
   @include desktop($desktop) {
     width: 358px;
+    margin-bottom: 0;
   }
 }

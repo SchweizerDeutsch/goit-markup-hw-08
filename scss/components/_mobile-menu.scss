@@ -42,6 +42,14 @@
   }
 }
 
+@media screen and (min-width: 480px) {
+  .mobil-menu-link_accent {
+    font-size: 34px;
+    line-height: 1.17;
+    letter-spacing: 0.02em;
+  }
+}
+
 .mobile-menu_link-post {
   text-decoration: none;
   color: #757575;

@@ -55,8 +55,8 @@
   text-transform: uppercase;
   margin-bottom: 10px;
 
-  @include desktop($desktop) {
-    text-align: center;
+  @include tablet($tablet) {
+    text-align: left;
   }
 }
 
