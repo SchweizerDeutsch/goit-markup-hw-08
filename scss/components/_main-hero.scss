@@ -11,6 +11,7 @@
   color: var(--white-color);
   background-size: cover;
   background-repeat: no-repeat;
+  text-align: center;
 
   @include tablet($tablet) {
     background-size: cover;
@@ -21,6 +22,7 @@
     font-size: 44px;
     line-height: 1.36;
     max-width: 696px;
+    text-align: center;
   }
 }
 
@@ -79,11 +81,6 @@
 .main-hero {
   padding-top: 118px;
   padding-bottom: 118px;
-
-  @include desktop($desktop) {
-    padding-top: 200px;
-    padding-bottom: 200px;
-  }
 }
 
 // .main-hero {
